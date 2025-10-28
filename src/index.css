@@ -2,28 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Estilos globais para o tema casino/vegas */
-body {
-  /* Usando a cor dark-purple como fundo principal */
-  background-color: theme('colors.dark-purple');
-  color: theme('colors.white');
-  min-height: 100vh;
+/* Estilos de base (tags) vão para a camada 'base' */
+@layer base {
+  body {
+    /* Agora a função theme() será resolvida corretamente */
+    background-color: theme('colors.dark-purple');
+    color: theme('colors.white');
+    min-height: 100vh;
+  }
 }
 
-/* Estilo para simular o brilho do neon/vegas */
-.text-glow {
-  text-shadow: 0 0 5px theme('colors.vermilion'), 0 0 10px theme('colors.vermilion'), 0 0 15px theme('colors.vermilion');
-}
+/* Classes de componentes vão para a camada 'components' */
+@layer components {
+  .text-glow {
+    text-shadow: 0 0 5px theme('colors.vermilion'), 0 0 10px theme('colors.vermilion'), 0 0 15px theme('colors.vermilion');
+  }
 
-/* Estilo de botão primário */
-.btn-primary {
-  @apply bg-vermilion text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 ease-in-out;
-  @apply hover:bg-wine hover:shadow-xl;
+  .btn-primary {
+    @apply bg-vermilion text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 ease-in-out;
+    @apply hover:bg-wine hover:shadow-xl;
+    /* Adicionando estado de foco que faltava (Boa prática) */
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-vermilion focus-visible:ring-offset-dark-purple;
+  }
+  
+  /* [CLEAN CODE] Removido .casino-bg por ser redundante (body já faz isso) */
 }
-
-/* Estilo para o background do layout */
-.casino-bg {
-  /* Adicionar um padrão sutil de fundo se necessário, por enquanto apenas a cor */
-  background-color: theme('colors.dark-purple');
-}
-
