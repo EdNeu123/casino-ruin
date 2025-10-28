@@ -1,0 +1,8 @@
+[
+    { "id": 1, "name": "HighRoller", "balance": 50000.00, "wins": 150, "losses": 10 },
+    { "id": 2, "name": "LuckySeven", "balance": 35000.00, "wins": 120, "losses": 5 },
+    { "id": 3, "name": "TheHouse", "balance": 15000.00, "wins": 80, "losses": 20 },
+    { "id": 4, "name": "GamblerX", "balance": 5000.00, "wins": 50, "losses": 50 },
+    { "id": 5, "name": "BrokeGuy", "balance": 100.00, "wins": 5, "losses": 150 }
+]
+

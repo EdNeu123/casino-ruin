@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos globais para o tema casino/vegas */
+body {
+  /* Usando a cor dark-purple como fundo principal */
+  background-color: theme('colors.dark-purple');
+  color: theme('colors.white');
+  min-height: 100vh;
+}
+
+/* Estilo para simular o brilho do neon/vegas */
+.text-glow {
+  text-shadow: 0 0 5px theme('colors.vermilion'), 0 0 10px theme('colors.vermilion'), 0 0 15px theme('colors.vermilion');
+}
+
+/* Estilo de botão primário */
+.btn-primary {
+  @apply bg-vermilion text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 ease-in-out;
+  @apply hover:bg-wine hover:shadow-xl;
+}
+
+/* Estilo para o background do layout */
+.casino-bg {
+  /* Adicionar um padrão sutil de fundo se necessário, por enquanto apenas a cor */
+  background-color: theme('colors.dark-purple');
+}
+
